@@ -63,8 +63,6 @@ async def counter(request: Request):
             name = await browser.prompt("Name: ")
             name_el.innerText = f"Hello '{name}'"
 
-        # await browser(sayName)
-
         await increment_btn.addEventListener("click", increment)
         await (await select("#nameBtn")).addEventListener("click", sayName)
 
