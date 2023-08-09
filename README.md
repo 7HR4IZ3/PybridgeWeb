@@ -90,7 +90,7 @@ def clock(request: Request):
 
         while True:
             timeEl.innerText = datetime.now().ctime()
-            time.sleep(1)
+            await asyncio.sleep(1)
 
     return HTMLResponse(script + str(
         dom.div("Time: ", dom.p(id="time"))
